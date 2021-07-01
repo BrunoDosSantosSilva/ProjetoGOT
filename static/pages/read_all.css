@@ -1,0 +1,23 @@
+.tabela {
+  border: 1px solid #bababa;
+  border-spacing: 0;
+  margin: 0 50px 20px;
+  width: 100%;
+}
+
+.tabela tr:nth-child(even) td {
+  background: #fff;
+}
+
+.tabela td {
+  padding: 10px;
+}
+
+.tabela_header td {
+  font-weight: bold;
+}
+
+img {
+  max-width: 200px;
+  max-height: 100px;
+}

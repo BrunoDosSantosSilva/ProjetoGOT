@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/pages/read_all.css" />
+</head>
+<body>
+    {% include 'header.html' %}
+    
+    <div class="bloco">
+        <h2>Vizualizar todos os personagens</h2>
+    </div>
+
+    <div class="bloco">
+        <table class="tabela">
+            <tr class="table_haeder">
+                <td>Personagem</td>
+                <td>Imagem</td>
+                <td>Ação</td>
+            </tr>
+
+            {% for registro in registros%}
+
+            <tr>
+                <td>{{ registro["id"] }}</td>
+                <td>{{ registro["nome"] }}</td>
+                <td>
+                  <img
+                    src="{{ registro['imagem_url'] }}"
+                    alt="{{ registro['nome'] }}"
+                  />
+                </td>
+                <td>
+                  <a href="/read/{{registro['id'] }}" class="botao">Visualizar</a>
+                </td>
+              </tr>
+              {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

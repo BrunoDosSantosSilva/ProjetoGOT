@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones</title><!--Criar Style.css-->
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    <div class="bloco">
+
+        <h2>{{ registro.nome}} </h2>
+    
+    </div>
+
+    <div class="bloco">
+
+        <img src="{{ registro.imagem_url }}" alt="{{registro.nome}}" class="imagem">
+
+    </div>
+    
+</body>
+</html>
