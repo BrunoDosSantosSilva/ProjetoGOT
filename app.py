@@ -13,11 +13,11 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 got = SQLAlchemy(app)
 
-class GOT_Personagens(got.model):
-    id= got.Column(got.Integer,primary_key=True)
-    nome=got.Column(got.String(30),nullable=False)
-    imagem_url= got.Column(got.String(2000),nullable=False)
-    descricao=got.Column(got.String(2000),nullable=False)
+class GOT_Personagens(got.Model):
+    id = got.Column(got.Integer,primary_key=True)
+    nome = got.Column(got.String(30),nullable=False)
+    imagem_url = got.Column(got.String(2000),nullable=False)
+    descricao = got.Column(got.String(2000),nullable=False)
 
     def __init__(self, nome,imagem_url,descricao):
         self.nome = nome
@@ -31,6 +31,10 @@ class GOT_Personagens(got.model):
     @staticmethod
     def read_single(registro_id):
         return GOT_Personagens.query.get(registro_id)
+
+    def save(self):
+        got.session.add(self)
+        got.session.commit()
 
 @app.route('/')
 
