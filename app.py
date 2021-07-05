@@ -37,7 +37,7 @@ class got_personagens(got.Model):
         got.session.commit()
 
     def update(self, new_data):
-        self.nome = new_data.nome
+        self.nome = new_data.nome  
         self.imagem_url = new_data.imagem_url
         
         self.save()
