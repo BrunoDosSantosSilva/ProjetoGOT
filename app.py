@@ -19,10 +19,11 @@ class got_personagens(got.Model):
     imagem_url = got.Column(got.String(2000),nullable=False)
     descricao = got.Column(got.String(2000),nullable=False)
 
-    def __init__(self, nome,imagem_url,descricao):
+    def __init__(self, nome,descricao,imagem_url):
         self.nome = nome
-        self.imagem_url = imagem_url
         self.descricao = descricao
+        self.imagem_url = imagem_url
+        
 
     @staticmethod
     def read_all():
