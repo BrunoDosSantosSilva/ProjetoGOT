@@ -7,6 +7,7 @@
     <meta name="viewport" content="width={device-width}, initial-scale=1.0">
     <title>Game of Thrones</title><!--Criar Style.css-->
     <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/pages/create.css" />
 </head>
 <body>
     {% include 'header.html' %}
@@ -41,12 +42,13 @@
                 <input type="text" id="descricao" name="descricao">
            
             </div>
-
+            
             <div class="bloco form_input">
                 <label for="imagem_url"> Imagem do Personagem(URL): </label>
                 <input type="text" id="imagem_url" name="imagem_url">
            
             </div>
+
 
             <div class="bloco form_input">
                 <input type="submit" class="botao" value="Enviar">

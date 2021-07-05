@@ -26,13 +26,9 @@
             {% for registro in registros%}
 
             <tr>
-                <td>{{ registro["id"] }}</td>
                 <td>{{ registro["nome"] }}</td>
                 <td>
-                  <img
-                    src="{{ registro['imagem_url'] }}"
-                    alt="{{ registro['nome'] }}"
-                  />
+                <img src="{{ registro['imagem_url'] }}"alt="{{ registro['nome'] }}"/>
                 </td>
                 <td>
                   <a href="/read/{{registro['id'] }}" class="botao">Visualizar</a>

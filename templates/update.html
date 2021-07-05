@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/pages/create.css"/>
+    <link rel="stylesheet" href="../static/pages/update.css">
+</head>
+<body>
+    {% include 'header.html' %}
+
+    {% if sucesso %}
+
+    <div class="bloco sucesso">
+
+        <p>Dados alterados com sucesso</p>
+
+    </div>
+
+    {% endif %}
+
+    <div class="bloco">
+
+        <h2>Editar dados dos filmes</h2>
+
+    </div>
+
+    <div class="bloco">
+
+        <form class="form" method="POST">
+            <div class="bloco form_input">
+                <label for="nome"> Nome do Personagem: </label>
+                <input type="text" id="nome" name="nome" value="{{registro.nome}}" />
+            </div>
+
+            <div class="bloco form_input">
+                <label for="descricao"> Descrição do Personagem: </label>
+                <input type="text" id="descricao" name="descricao" value="{{registro.descricao}}" />
+           
+            </div>
+            
+            <div class="bloco form_input">
+                <label for="imagem_url">Imagem do Personagem(URL): </label>
+                <input type="text" id="imagem_url" name="imagem_url" value="{{registro.imagem_url}}" />
+            </div>
+
+
+
+            <div class="bloco form_input">
+                <input type="submit" class="botao" value="Enviar" />
+            </div>
+        </form>
+
+    </div>    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+    <link rel="stylesheet" href="/static/pages/delete.css">
+</head>
+<body>
+    {% include 'header.html' %}
+
+    {% if sucesso %}
+
+    <div class="bloco removido_sucesso">
+        <p>Personagem excluído com sucesso!!!</p>
+    </div>
+
+    <div class="bloco">
+        <a href="/read" class="botao">Visualizar todos os registros</a>
+    </div>
+
+    {% elif registro %}
+
+    <div class="bloco">
+        <h2> Excluir Personagem</h2>
+    </div>
+
+    <div class="bloco">
+
+        <p>Tem certeza que deseja excluir o personagem<span class="highlight">{{registro.nome}}</span>?<br><br>
+            <a href="/delete/{{registro.id}}/confirmed" class="botao">Remover</a>
+            <a href="/read" class="botao">Cancelar</a>
+        </p>
+    </div>
+
+    {% else %}
+
+    <div class="bloco">
+        <h2>Excluir Personagem</h2>
+    </div>
+
+    <div class="bloco">
+        <p>Não foi encontrado o personagem com esse ID.<br><br>
+            <a href="/read" class="botao">Voltar para a lista de filmes</a>
+        </p>
+    </div>
+
+    {% endif %}
+
+
+    
+</body>
+</html>
