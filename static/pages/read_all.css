@@ -1,12 +1,7 @@
 .tabela {
-  border: 1px solid #bababa;
   border-spacing: 0;
   margin: 0 50px 20px;
   width: 100%;
-}
-
-.tabela td {
-  padding: 10px;
 }
 
 .tabela_header td {
@@ -15,5 +10,5 @@
 
 img {
   max-width: 200px;
-  max-height: 100px;
+  max-height: 200px;
 }
