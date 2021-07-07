@@ -4,7 +4,6 @@ body {
   background-image:url("../static/img/fundo\ casas.jpg"),url("/static/img/fundo.jpg");
   background-position: center;
   background-size: 1950px;
-
   font-family: "Montserrat", sans-serif;
   margin: 0;
   min-height: calc(100vh - 40px);
@@ -22,9 +21,20 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  color: #921600;
+  color:red;
   font-size: 17px;
+  text-shadow: 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000, -2px -2px 2px #000;
 }
+.logo{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: arial, sans-serif;
+  color: whitesmoke;
+  position: center;
+  text-align: center;
+}
+
 
 .botao {
   background-color: #00000096;
@@ -42,4 +52,8 @@ body {
 
 .botao:hover {
   background-color: #5673ee;
+}
+
+.personagem{
+  display: inline-block;
 }

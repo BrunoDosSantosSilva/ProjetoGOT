@@ -13,34 +13,22 @@
     
     <br>
     <div class="bloco">
-        <h2>Personagens</h2>
+        <h1>Personagens</h1>
     </div>
 
     <div class="bloco">
         <table class="tabela">
             {% for registro in registros%}
-            <td>
-            <tr>
-                <td>
-                {{ registro["nome"] }}
-                </td>
-            <tr>
-
-            <tr>   
-                <td>
-                <img src="{{ registro['imagem_url'] }}"alt="{{ registro['nome'] }}"/>
-                </td>
-            <tr>
-                
-            <tr>
-                <td>
-                  <a href="/read/{{registro['id'] }}" class="botao">Visualizar</a>
-                </td>
-            </tr>
-            </td>
-
+            
+            <div class="personagem">
+                <h1>{{ registro["nome"] }}</h1>
+                <img src="{{ registro['imagem_url'] }}"alt="{{ registro['nome'] }}" aling="left"/>
+                <h1></h1>
+                <a href="/read/{{registro['id'] }}" class="botao">Visualizar</a>
+            </div>
               {% endfor %}
         </table>
     </div>
+    
 </body>
 </html>

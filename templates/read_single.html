@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Thrones</title><!--Criar Style.css-->
-    <link rel="stylesheet" href="../static/style.css" />
-    <link rel="stylesheet" href="../static/pages/read_single.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/pages/read_single.css" />
 </head>
 <body>
     
@@ -19,17 +19,18 @@
     
     </div>
 
-    <div class="bloco">
+    <div class="coluna">
+        <div class="personagem">
 
-        <img src="{{ registro.imagem_url }}" alt="{{registro.nome}}" class="imagem">
+            <img src="{{ registro.imagem_url }}" alt="{{registro.nome}}" width="200" height="300"  class="imagem">
 
+        </div>
+
+        <div class="bloco">
+
+            <h2>{{ registro.descricao}} </h2>
+
+        </div>
     </div>
-
-    <div class="bloco">
-
-        <h2>{{ registro.descricao}} </h2>
-
-    </div>
-    
 </body>
 </html>

@@ -2,6 +2,9 @@
   border-spacing: 0;
   margin: 0 50px 20px;
   width: 100%;
+  text-shadow: 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000, -2px -2px 2px #000;
+  color: red;
+  
 }
 
 .tabela_header td {

@@ -1,3 +1,10 @@
 .imagem{
-    max-height: 400;
+    max-height: 500;
+    size: 500;
 }
+
+.coluna{
+    display: inline-flex;
+    size: 500;
+}
+
