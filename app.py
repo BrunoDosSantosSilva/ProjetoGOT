@@ -76,7 +76,7 @@ def create():
     if request.method =='POST':
         form = request.form
 
-        registro = got_personagens(form['nome'],form['imagem_url'],form['descricao'])
+        registro = got_personagens(form['nome'],form['descricao'],form['imagem_url'])
         registro.save()
 
         id_atribuido = registro.id
