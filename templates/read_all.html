@@ -15,20 +15,24 @@
     <div class="bloco">
         <h1>Personagens</h1>
     </div>
-
     <div class="bloco">
         <table class="tabela">
             {% for registro in registros%}
             
             <div class="personagem">
                 <h1>{{ registro["nome"] }}</h1>
-                <img src="{{ registro['imagem_url'] }}"alt="{{ registro['nome'] }}" aling="left"/>
+                <img src="{{ registro['imagem_url'] }}"alt="{{ registro['nome'] }}"/>
                 <h1></h1>
                 <a href="/read/{{registro['id'] }}" class="botao">Visualizar</a>
             </div>
               {% endfor %}
         </table>
+        <script src="/static/index.js"></script>
     </div>
-    
+    <br></br>
+    <h1></h1>
+    <div class="musica">
+        <button onclick="tocar()">Tocar Tema de Abertura</button>
+    </div>
 </body>
 </html>

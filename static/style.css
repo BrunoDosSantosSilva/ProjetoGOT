@@ -57,3 +57,7 @@ body {
 .personagem{
   display: inline-block;
 }
+
+.musica{
+  color: #000;
+}
