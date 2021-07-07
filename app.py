@@ -39,6 +39,7 @@ class got_personagens(got.Model):
 
     def update(self, new_data):
         self.nome = new_data.nome  
+        self.descricao = new_data.descricao
         self.imagem_url = new_data.imagem_url
         
         self.save()
