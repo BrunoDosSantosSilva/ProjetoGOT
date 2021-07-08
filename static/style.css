@@ -25,6 +25,15 @@ body {
   font-size: 17px;
   text-shadow: 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000, -2px -2px 2px #000;
 }
+
+.bloco2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color:red;
+  font-size: 17px;
+}
+
 .logo{
   font-style: italic;
   font-weight: bold;
