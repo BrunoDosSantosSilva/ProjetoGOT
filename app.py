@@ -1,12 +1,18 @@
 from flask import Flask, render_template,request
 from flask_sqlalchemy import SQLAlchemy
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+user = os.environ.get("user")
+password = os.environ.get("password")
+host = os.environ.get("host")
+database = os.environ.get("database")
 
 app = Flask(__name__)
-
-user='ojnjbeia'
-password='h9tsZudNolQRRx8cNOSBoWpBY71wMxTb'
-host='tuffi.db.elephantsql.com'
-database='ojnjbeia'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{user}:{password}@{host}/{database}' 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
